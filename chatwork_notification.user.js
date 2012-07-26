@@ -7,7 +7,6 @@
 // @description    ChatWork notification
 // @include        https://www.chatwork.com/*
 // @run-at         window-load
-// @delay          1000
 // @icon           https://www.chatwork.com/favicon.ico
 // ==/UserScript==
 (function(){
@@ -42,7 +41,7 @@
                 for (var i = 0, len = unreadCountElem.length; i < len; i++){
                     var unreadElem = unreadCountElem[i];
                     if (unreadElem.parentNode.style.display !== "none"){
-                        GM_notification("append message", "ChatWork", null, openChatWork);
+                        GM_notification("new message", "ChatWork", null, openChatWork);
                     }
                 }
             }
